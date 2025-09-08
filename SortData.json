@@ -1,0 +1,31 @@
+[
+    {
+        "Hint" : "D1",
+        "Correct_Sort" : [
+            "D1",
+            "A1",
+            "C1",
+            "B1"
+        ]
+    }
+    ,
+    {
+        "Hint" : "A2",
+        "Correct_Sort" : [
+            "A2",
+            "B2",
+            "D2",
+            "C2"
+        ]
+    }
+    ,
+    {
+        "Hint" : "B3",
+          "Correct_Sort" : [
+            "B3",
+            "D3",
+            "C3",
+            "A3"
+          ]
+    }
+]
