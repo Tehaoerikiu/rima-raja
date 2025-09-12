@@ -1702,6 +1702,26 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "In-game BGM - Whitechapel Loop.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "In-game BGM - Whitechapel Loop.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Game Win.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Game Win.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -10535,6 +10555,42 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "End",
+                        "=",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "In-game BGM - Whitechapel Loop.wav",
+                        "4",
+                        "yes",
+                        "80",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
                         "value": "OpacityCapability::OpacityBehavior::Value"
                       },
                       "parameters": [
@@ -10703,6 +10759,15 @@
                     "Restart",
                     "ButtonFSM",
                     "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StopMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "4"
                   ]
                 }
               ]
@@ -11765,6 +11830,15 @@
                 "\"Level1_Win\"",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "4"
+              ]
             }
           ]
         }
@@ -12669,6 +12743,19 @@
                 "",
                 "\"Transition\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "Game Win.wav",
+                "5",
+                "",
+                "80",
+                "1"
+              ]
             }
           ]
         },
@@ -12847,6 +12934,15 @@
                 "",
                 "\"Loading Scene\"",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "5"
               ]
             }
           ]
@@ -15533,7 +15629,6 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -15572,6 +15667,82 @@
             }
           ],
           "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "End",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "In-game BGM - Whitechapel Loop.wav",
+                    "4",
+                    "yes",
+                    "80",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::Value"
+                      },
+                      "parameters": [
+                        "Next",
+                        "Opacity",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Next",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "StartFadeOut",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -16247,6 +16418,15 @@
                     "ButtonFSM",
                     "yes"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "StopMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "4"
+                  ]
                 }
               ]
             },
@@ -16690,6 +16870,15 @@
                     "",
                     "\"level2_Win\"",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StopMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "4"
                   ]
                 }
               ]
@@ -17743,6 +17932,19 @@
                 "",
                 "\"Transition\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "Game Win.wav",
+                "5",
+                "",
+                "80",
+                "1"
+              ]
             }
           ]
         },
@@ -17921,6 +18123,15 @@
                 "",
                 "\"Loading Scene\"",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "5"
               ]
             }
           ]
@@ -21275,6 +21486,44 @@
                     "yes"
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "EndDialogue",
+                        "=",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "In-game BGM - Whitechapel Loop.wav",
+                        "4",
+                        "yes",
+                        "80",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -22518,6 +22767,15 @@
                     "ButtonFSM",
                     "yes"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "StopMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "4"
+                  ]
                 }
               ]
             },
@@ -22838,6 +23096,15 @@
                     "",
                     "\"Level3_Win\"",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StopMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "4"
                   ]
                 }
               ]
@@ -23776,6 +24043,19 @@
                 "",
                 "\"Transition\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "Game Win.wav",
+                "5",
+                "",
+                "80",
+                "1"
+              ]
             }
           ]
         },
@@ -23908,6 +24188,15 @@
                 "",
                 "\"Loading Scene\"",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "5"
               ]
             }
           ]
