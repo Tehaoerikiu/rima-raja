@@ -1,6 +1,12 @@
 [
     {
         "Hint" : "D1",
+        "Sorting" : [
+            "A1",
+            "B1",
+            "C1",
+            "D1"
+        ],
         "Correct_Sort" : [
             "D1",
             "A1",
@@ -11,6 +17,12 @@
     ,
     {
         "Hint" : "A2",
+        "Sorting" : [
+            "A2",
+            "B2",
+            "C2",
+            "D2"
+        ],
         "Correct_Sort" : [
             "A2",
             "B2",
@@ -21,6 +33,12 @@
     ,
     {
         "Hint" : "B3",
+        "Sorting" : [
+            "A3",
+            "B3",
+            "C3",
+            "D3"
+        ],
           "Correct_Sort" : [
             "B3",
             "D3",
